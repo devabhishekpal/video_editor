@@ -3,6 +3,7 @@ project(video_editor C CXX)
 set(CMAKE_CXX_STANDARD 14)
 
 add_subdirectory(lib/glfw)
+add_subdirectory(lib/FFmpeg)
 
 if(APPLE)
     list(APPEND EXTRA_LIBS "-framework OpenGL")
@@ -14,4 +15,4 @@ else()
 endif()
 
 add_executable(video_editor src/main.cpp)
-target_link_libraries(video_editor glfw ${EXTRA_LIBS})
+target_link_libraries(video_editor FFmpeg glfw ${EXTRA_LIBS})

@@ -1,0 +1,1 @@
+A video editor in C++ using the GLFW Libary and FFMPEG library.
